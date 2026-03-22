@@ -1,0 +1,17 @@
+{
+  "experiments": [
+    {
+      "name": "llm",
+      "command": "python train.py",
+      "metric_regex": "^val_bpb:\\s*([0-9.]+)",
+      "metric_direction": "lower",
+      "memory_regex": "^peak_vram_mb:\\s*([0-9.]+)"
+    },
+    {
+      "name": "toy_regression",
+      "command": "python train_toy_regression.py",
+      "metric_regex": "^val_mse:\\s*([0-9.]+)",
+      "metric_direction": "lower"
+    }
+  ]
+}
